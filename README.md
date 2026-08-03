@@ -39,7 +39,7 @@ This portfolio contains **3 additional fullstack projects** built with different
 - Authentication: JWT, bcrypt
 - Dockerized deployment
 
-**GitHub:** `ecommerce-platform/`
+**GitHub:** [`marshid/marshid-portfolio/ecommerce-platform`](https://github.com/marshu123/marshid-portfolio/tree/main/ecommerce-platform)
 
 ### 2. Social Media Dashboard
 
@@ -57,7 +57,7 @@ This portfolio contains **3 additional fullstack projects** built with different
 - Authentication: JWT, bcrypt
 - NoSQL database for flexibility
 
-**GitHub:** `social-dashboard/`
+**GitHub:** [`marshid/marshid-portfolio/social-dashboard`](https://github.com/marshu123/marshid-portfolio/tree/main/social-dashboard)
 
 ### 3. Chat Application
 
@@ -74,7 +74,7 @@ This portfolio contains **3 additional fullstack projects** built with different
 - Frontend: React, TypeScript
 - WebSockets for real-time communication
 
-**GitHub:** `chat-app/`
+**GitHub:** [`marshid/marshid-portfolio/chat-app`](https://github.com/marshu123/marshid-portfolio/tree/main/chat-app)
 
 ## Project Structure
 
@@ -218,13 +218,30 @@ Each project has several potential improvements:
 - File sharing
 - Presence indicators
 
-## Author
+## Connect With Me
+
+### LinkedIn
 
 Connect with me on LinkedIn: [https://www.linkedin.com/in/marshidp/](https://www.linkedin.com/in/marshidp/)
 
-## Conclusion
+### Portfolio Website
 
-This portfolio showcases comprehensive fullstack development skills through diverse, production-ready applications. Each project is independently functional and demonstrates different aspects of modern web development. The codebase follows clean architecture principles and is ready for integration into professional environments.
+Explore my interactive portfolio website showcasing my fullstack development projects:
+
+[Marshid - Fullstack Developer Portfolio](https://marshid-portfolio.vercel.app/)
+
+### GitHub Repository
+
+Browse all my open-source projects and contributions:
+
+[Marshid Portfolio on GitHub](https://github.com/marshu123/marshid-portfolio)
+
+## About This Portfolio
+
+This portfolio showcases comprehensive fullstack development skills through diverse,
+production-ready applications. Each project is independently functional and demonstrates
+different aspects of modern web development. The codebase follows clean architecture
+principles and is ready for integration into professional environments.
 
 **Repository Statistics:**
 - Total Projects: 4
