@@ -218,6 +218,10 @@ Each project has several potential improvements:
 - File sharing
 - Presence indicators
 
+## Author
+
+Connect with me on LinkedIn: [https://www.linkedin.com/in/marshidp/](https://www.linkedin.com/in/marshidp/)
+
 ## Conclusion
 
 This portfolio showcases comprehensive fullstack development skills through diverse, production-ready applications. Each project is independently functional and demonstrates different aspects of modern web development. The codebase follows clean architecture principles and is ready for integration into professional environments.
