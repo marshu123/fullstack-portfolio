@@ -1,0 +1,32 @@
+# task-manager is a separate project with its own repository and history.
+# It is checked out here as a nested clone for local convenience only, so keep
+# it out of this repo rather than committing it as a gitlink.
+/task-manager/
+
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+next-env.d.ts
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# misc
+.DS_Store
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env*.local
+
+# typescript
+*.tsbuildinfo
