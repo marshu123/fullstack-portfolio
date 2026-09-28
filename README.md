@@ -39,7 +39,7 @@ This portfolio contains **3 additional fullstack projects** built with different
 - Authentication: JWT, bcrypt
 - Dockerized deployment
 
-**GitHub:** [`marshid/marshid-portfolio/ecommerce-platform`](https://github.com/marshu123/marshid-portfolio/tree/main/ecommerce-platform)
+**GitHub:** [`marshu123/fullstack-portfolio/ecommerce-platform`](https://github.com/marshu123/fullstack-portfolio/tree/main/ecommerce-platform)
 
 ### 2. Social Media Dashboard
 
@@ -57,7 +57,7 @@ This portfolio contains **3 additional fullstack projects** built with different
 - Authentication: JWT, bcrypt
 - NoSQL database for flexibility
 
-**GitHub:** [`marshid/marshid-portfolio/social-dashboard`](https://github.com/marshu123/marshid-portfolio/tree/main/social-dashboard)
+**GitHub:** [`marshu123/fullstack-portfolio/social-dashboard`](https://github.com/marshu123/fullstack-portfolio/tree/main/social-dashboard)
 
 ### 3. Chat Application
 
@@ -74,43 +74,43 @@ This portfolio contains **3 additional fullstack projects** built with different
 - Frontend: React, TypeScript
 - WebSockets for real-time communication
 
-**GitHub:** [`marshid/marshid-portfolio/chat-app`](https://github.com/marshu123/marshid-portfolio/tree/main/chat-app)
+**GitHub:** [`marshu123/fullstack-portfolio/chat-app`](https://github.com/marshu123/fullstack-portfolio/tree/main/chat-app)
 
 ## Project Structure
 
 ```
 fullstack-portfolio/
-├── ecommerce-platform/           # E-commerce solution (Python + FastAPI)
-│   ├── backend/                # FastAPI backend with SQLAlchemy
-│   │   ├── main.py             # API implementation
-│   │   ├── requirements.txt    # Python dependencies
-│   │   └── Dockerfile          # Containerization
-│   └── frontend/               # React frontend
-│       ├── src/                # React components
-│       └── package.json        # Frontend dependencies
-│
-├── social-dashboard/            # Social media platform (Node.js + Express)
-│   ├── backend/                # Express backend with MongoDB
-│   │   ├── src/               # Server implementation
-│   │   ├── package.json       # Node dependencies
-│   │   └── Dockerfile         # Containerization
-│   └── frontend/               # React frontend
-│       ├── src/                # React components
-│       └── package.json        # Frontend dependencies
-│
-├── chat-app/                    # Real-time chat (Node.js + Socket.io)
-│   ├── backend/                # Express + Socket.io backend
-│   │   ├── src/               # Server implementation
-│   │   └── package.json       # Node dependencies
-│   └── frontend/               # React frontend
-│       ├── src/                # React components
-│       └── package.json        # Frontend dependencies
-│
-└── task-manager/               # Original task management app
-    ├── main.py                 # FastAPI backend
-    ├── frontend/              # React frontend
-    ├── Dockerfile             # Containerization
-    └── README.md              # Original project documentation
+â”œâ”€â”€ ecommerce-platform/           # E-commerce solution (Python + FastAPI)
+â”‚   â”œâ”€â”€ backend/                # FastAPI backend with SQLAlchemy
+â”‚   â”‚   â”œâ”€â”€ main.py             # API implementation
+â”‚   â”‚   â”œâ”€â”€ requirements.txt    # Python dependencies
+â”‚   â”‚   â””â”€â”€ Dockerfile          # Containerization
+â”‚   â””â”€â”€ frontend/               # React frontend
+â”‚       â”œâ”€â”€ src/                # React components
+â”‚       â””â”€â”€ package.json        # Frontend dependencies
+â”‚
+â”œâ”€â”€ social-dashboard/            # Social media platform (Node.js + Express)
+â”‚   â”œâ”€â”€ backend/                # Express backend with MongoDB
+â”‚   â”‚   â”œâ”€â”€ src/               # Server implementation
+â”‚   â”‚   â”œâ”€â”€ package.json       # Node dependencies
+â”‚   â”‚   â””â”€â”€ Dockerfile         # Containerization
+â”‚   â””â”€â”€ frontend/               # React frontend
+â”‚       â”œâ”€â”€ src/                # React components
+â”‚       â””â”€â”€ package.json        # Frontend dependencies
+â”‚
+â”œâ”€â”€ chat-app/                    # Real-time chat (Node.js + Socket.io)
+â”‚   â”œâ”€â”€ backend/                # Express + Socket.io backend
+â”‚   â”‚   â”œâ”€â”€ src/               # Server implementation
+â”‚   â”‚   â””â”€â”€ package.json       # Node dependencies
+â”‚   â””â”€â”€ frontend/               # React frontend
+â”‚       â”œâ”€â”€ src/                # React components
+â”‚       â””â”€â”€ package.json        # Frontend dependencies
+â”‚
+â””â”€â”€ task-manager/               # Original task management app
+    â”œâ”€â”€ main.py                 # FastAPI backend
+    â”œâ”€â”€ frontend/              # React frontend
+    â”œâ”€â”€ Dockerfile             # Containerization
+    â””â”€â”€ README.md              # Original project documentation
 ```
 
 ## Key Skills Demonstrated
@@ -234,7 +234,7 @@ Explore my interactive portfolio website showcasing my fullstack development pro
 
 Browse all my open-source projects and contributions:
 
-[Marshid Portfolio on GitHub](https://github.com/marshu123/marshid-portfolio)
+[Marshid Portfolio on GitHub](https://github.com/marshu123/fullstack-portfolio)
 
 ## About This Portfolio
 
