@@ -47,11 +47,21 @@ export default function ProjectDetailPage({ params }: Params) {
         </p>
 
         <div className="mt-7 flex flex-wrap gap-3">
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Live demo
+            </a>
+          )}
           <a
             href={project.repoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className={project.liveUrl ? 'btn-ghost' : 'btn-primary'}
           >
             View source
           </a>

@@ -39,7 +39,7 @@ export const projects: Project[] = [
       'Running the same test suite against SQLite and PostgreSQL',
     ],
     repoUrl: 'https://github.com/marshu123/pulse',
-    liveUrl: 'https://pulse-frontend.vercel.app',
+    liveUrl: 'https://frontend-ruddy-two-24.vercel.app',
     accent: 'from-emerald-500/20 to-teal-500/5',
     featured: true,
   },

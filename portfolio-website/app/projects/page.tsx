@@ -72,6 +72,16 @@ export default function ProjectsPage() {
                 >
                   Source
                 </a>
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent-500 transition-colors hover:text-accent-400"
+                  >
+                    Live demo
+                  </a>
+                )}
               </div>
             </div>
           </article>
