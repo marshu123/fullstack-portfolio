@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { projects } from '@/lib/projects';
+import ProjectShot from '@/components/ProjectShot';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -14,23 +15,29 @@ export default function ProjectsPage() {
       <header className="max-w-2xl">
         <p className="font-mono text-sm text-accent-500">/projects</p>
         <h1 className="section-title mt-3">Projects</h1>
-        <p className="mt-4 text-slate-400">
-          Four applications built to compare stacks and data models against the
-          same problem shape: authentication, persistence, and an interface a
-          real person could use.
-        </p>
+          <p className="mt-4 max-w-2xl text-slate-400">
+            Four applications built to compare stacks and data models against the
+            same problem shape: authentication, persistence, and an interface a
+            real person could use.
+          </p>
+          <p className="mt-4 max-w-2xl border-l-2 border-accent-500/40 pl-4 text-sm leading-relaxed text-slate-500">
+            The images below are <span className="text-slate-400">design
+            concepts</span> showing the direction each project is heading. The
+            repositories contain a working subset of them so far.
+          </p>
       </header>
 
       <div className="mt-14 grid gap-6 sm:grid-cols-2">
         {projects.map((project) => (
-          <article
-            key={project.id}
-            className="card group flex flex-col"
-          >
-            <div
-              className={`-m-6 mb-6 h-32 bg-gradient-to-br ${project.accent} border-b border-white/10`}
-            />
-            <div className="flex flex-1 flex-col">
+            <article
+              key={project.id}
+              className="card group flex flex-col p-0"
+            >
+              <ProjectShot
+                project={project}
+                className="aspect-[16/10] w-full border-b border-white/10"
+              />
+              <div className="flex flex-1 flex-col p-6">
               <h2 className="text-lg font-semibold text-white">
                 {project.title}
               </h2>

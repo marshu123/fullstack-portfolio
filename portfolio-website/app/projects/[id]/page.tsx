@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProject, projects } from '@/lib/projects';
+import ProjectShot from '@/components/ProjectShot';
 
 type Params = { params: { id: string } };
 
@@ -60,9 +61,23 @@ export default function ProjectDetailPage({ params }: Params) {
         </div>
       </header>
 
-      <div
-        className={`mt-12 h-40 rounded-2xl bg-gradient-to-br ${project.accent} border border-white/10`}
-      />
+      {project.design ? (
+        <figure className="mt-12 overflow-hidden rounded-2xl border border-white/10 bg-ink-900">
+          <ProjectShot project={project} priority badge={false} className="aspect-[16/10] w-full" />
+          <figcaption className="border-t border-white/10 px-5 py-4 text-xs leading-relaxed text-slate-500">
+            <span className="font-semibold uppercase tracking-wider text-slate-400">
+              Design concept
+            </span>{' '}
+            &mdash; this is the direction I am building towards. The repository
+            contains a working subset of it so far, not the full interface shown
+            above.
+          </figcaption>
+        </figure>
+      ) : (
+        <div
+          className={`mt-12 h-40 rounded-2xl bg-gradient-to-br ${project.accent} border border-white/10`}
+        />
+      )}
 
       <div className="mt-12 grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-10">

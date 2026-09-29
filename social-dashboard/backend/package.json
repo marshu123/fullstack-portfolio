@@ -2,17 +2,20 @@
   "name": "social-dashboard-backend",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "node src/index.js"
+    "dev": "node src/index.js",
+    "dev:seeded": "node scripts/dev-seeded.js"
   },
   "dependencies": {
-    "express": "^4.21.2",
-    "cors": "^2.8.5",
-    "mongoose": "^8.9.2",
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "dotenv": "^16.4.7"
+    "mongoose": "^8.9.2"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0"
   }
 }

@@ -128,7 +128,9 @@ const PostComponent = ({ post, currentUser, onLike, onComment }) => {
   return (
     <div className="post">
       <div className="post-header">
-        <h3>Post by User {post.userId}</h3>
+        <h3>
+          Post by {post.userId?.username || 'Unknown'}
+        </h3>
         <span className="post-date">
           {new Date(post.createdAt).toLocaleDateString()}
         </span>
@@ -139,7 +141,13 @@ const PostComponent = ({ post, currentUser, onLike, onComment }) => {
       </div>
       <div className="post-actions">
         <button
-          className={`like-btn ${post.likes.includes(currentUser?.userId) ? 'liked' : ''}`}
+          className={`like-btn ${
+            (post.likes || []).some(
+              (id) => String(id) === String(currentUser?.userId)
+            )
+              ? 'liked'
+              : ''
+          }`}
           onClick={() => onLike(post._id)}
         >
           Like ({post.likes?.length || 0})
@@ -157,7 +165,9 @@ const PostComponent = ({ post, currentUser, onLike, onComment }) => {
           <h4>Comments</h4>
           {post.comments?.map((comment, index) => (
             <div key={index} className="comment">
-              <span className="comment-author">User {comment.userId}:</span>
+              <span className="comment-author">
+                {comment.userId?.username || 'Unknown'}:
+              </span>
               <span className="comment-content">{comment.content}</span>
               <span className="comment-date">
                 {new Date(comment.createdAt).toLocaleDateString()}
@@ -213,7 +223,7 @@ const HomePage = ({ token, onLogout }) => {
   const handleCreatePost = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${API_BASE_URL}/api/posts", newPost, {
+      await axios.post(`${API_BASE_URL}/api/posts`, newPost, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setNewPost({ content: '', image: '' });
@@ -225,7 +235,7 @@ const HomePage = ({ token, onLogout }) => {
 
   const handleLike = async (postId) => {
     try {
-      await axios.post(`${API_BASE_URL}/api/posts/${postId}/like", {}, {
+      await axios.post(`${API_BASE_URL}/api/posts/${postId}/like`, {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchPosts();
@@ -236,7 +246,7 @@ const HomePage = ({ token, onLogout }) => {
 
   const handleComment = async (postId, content) => {
     try {
-      await axios.post(`${API_BASE_URL}/api/posts/${postId}/comment", { content }, {
+      await axios.post(`${API_BASE_URL}/api/posts/${postId}/comment`, { content }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchPosts();

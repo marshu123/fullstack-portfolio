@@ -11,6 +11,7 @@ export type Project = {
   liveUrl?: string;
   accent: string;
   featured: boolean;
+  design?: string;
 };
 
 export const projects: Project[] = [
@@ -21,7 +22,7 @@ export const projects: Project[] = [
     description:
       'An online shopping platform with JWT authentication, a product catalogue, cart state, and order processing.',
     problem:
-      'Wanted to build the full request path end to end — from database schema through a REST API to a responsive storefront — rather than only consuming a backend.',
+      'Wanted to build the full request path end to end Ã¢â‚¬â€ from database schema through a REST API to a responsive storefront Ã¢â‚¬â€ rather than only consuming a backend.',
     stack: ['React', 'TypeScript', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'Docker'],
     features: [
       'JWT authentication with bcrypt password hashing',
@@ -37,6 +38,8 @@ export const projects: Project[] = [
       'Containerising the backend without hiding config errors',
     ],
     repoUrl: 'https://github.com/marshu123/fullstack-portfolio/tree/main/ecommerce-platform',
+    
+    design: '/projects/ecommerce-platform.png',
     accent: 'from-teal-500/20 to-cyan-500/5',
     featured: true,
   },
@@ -63,6 +66,8 @@ export const projects: Project[] = [
       'Keeping password hashing consistent at registration',
     ],
     repoUrl: 'https://github.com/marshu123/fullstack-portfolio/tree/main/social-dashboard',
+    
+    design: '/projects/social-dashboard.png',
     accent: 'from-violet-500/20 to-fuchsia-500/5',
     featured: true,
   },
@@ -73,7 +78,7 @@ export const projects: Project[] = [
     description:
       'A real-time chat with Socket.io, persistent message history, and live connection indicators.',
     problem:
-      'Focused on the parts of realtime that are hard to fake later — connection lifecycle, message ordering, and what happens when a client reconnects.',
+      'Focused on the parts of realtime that are hard to fake later Ã¢â‚¬â€ connection lifecycle, message ordering, and what happens when a client reconnects.',
     stack: ['React', 'TypeScript', 'Node.js', 'Express', 'Socket.io', 'MongoDB'],
     features: [
       'Real-time messaging over WebSockets',
@@ -90,6 +95,7 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/marshu123/fullstack-portfolio/tree/main/chat-app',
     accent: 'from-sky-500/20 to-blue-500/5',
     featured: true,
+    design: '/projects/chat-app.png',
   },
   {
     id: 'task-manager',
@@ -98,7 +104,7 @@ export const projects: Project[] = [
     description:
       'My first fullstack project: a task CRUD API in FastAPI with a React and TypeScript frontend.',
     problem:
-      'Started here to learn the shape of a real project — separating a typed API contract from the UI that consumes it, and containerising a backend from day one.',
+      'Started here to learn the shape of a real project Ã¢â‚¬â€ separating a typed API contract from the UI that consumes it, and containerising a backend from day one.',
     stack: ['React', 'TypeScript', 'FastAPI', 'SQLAlchemy', 'Pydantic', 'Docker'],
     features: [
       'CRUD endpoints for tasks',
@@ -114,6 +120,8 @@ export const projects: Project[] = [
       'Setting up Docker from the beginning',
     ],
     repoUrl: 'https://github.com/marshu123/task-manager',
+    
+    design: '/projects/task-manager.png',
     accent: 'from-amber-500/20 to-orange-500/5',
     featured: false,
   },
@@ -141,5 +149,44 @@ export const skills: { group: string; items: string[] }[] = [
   {
     group: 'Tooling',
     items: ['Docker', 'Git', 'Vercel', 'ESLint'],
+  },
+];
+
+/**
+ * Self-assessed proficiency, used for the progress bars on the home page.
+ * These are honest estimates of what I have actually used on real projects,
+ * not claims about years of experience.
+ */
+export const skillLevels: { name: string; level: number }[] = [
+  { name: 'React', level: 85 },
+  { name: 'TypeScript', level: 80 },
+  { name: 'JavaScript', level: 78 },
+  { name: 'Node.js / Express', level: 75 },
+  { name: 'Python / FastAPI', level: 70 },
+  { name: 'MongoDB', level: 65 },
+  { name: 'PostgreSQL / SQLAlchemy', level: 60 },
+  { name: 'CSS / Tailwind', level: 72 },
+];
+
+export const learning: { topic: string; detail: string }[] = [
+  {
+    topic: 'TypeScript beyond the compiler',
+    detail:
+      'Writing types that describe the domain instead of types that satisfy the checker. Discriminated unions for API payloads are the next thing I want to get fluent with.',
+  },
+  {
+    topic: 'Testing a FastAPI service properly',
+    detail:
+      'I have a CI job but my coverage is thin. Learning pytest fixtures and integration tests against a real test database rather than mocks.',
+  },
+  {
+    topic: 'Authentication done properly',
+    detail:
+      'Short-lived access tokens, refresh rotation, and httpOnly cookies. I wrote down what I got wrong the first time in a post on my own dashboard.',
+  },
+  {
+    topic: 'Deployment and observability',
+    detail:
+      'Containers, CI that runs on every push, structured logs, and reading them when something breaks at 2am.',
   },
 ];
