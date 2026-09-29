@@ -47,8 +47,8 @@ export default function HomePage() {
             </Link>
             <a
               href="/cv.pdf"
+              download="Marshid-P-CV.pdf"
               className="btn-ghost"
-              aria-label="Download CV as a PDF"
             >
               Download CV
             </a>
