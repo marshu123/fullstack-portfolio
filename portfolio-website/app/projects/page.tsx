@@ -37,8 +37,11 @@ export default function ProjectsPage() {
                 project={project}
                 className="aspect-[16/10] w-full border-b border-white/10"
               />
-              <div className="flex flex-1 flex-col p-6">
-              <h2 className="text-lg font-semibold text-white">
+                <div className="flex flex-1 flex-col p-6">
+                  <span className="mb-2 w-fit rounded-md border border-white/10 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-slate-500">
+                    Design concept
+                  </span>
+                  <h2 className="text-lg font-semibold text-white">
                 {project.title}
               </h2>
               <p className="mt-1 text-sm text-accent-500">{project.tagline}</p>

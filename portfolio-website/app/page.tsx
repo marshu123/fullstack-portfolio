@@ -168,6 +168,9 @@ export default function HomePage() {
                   className="aspect-[16/10] w-full border-b border-white/10"
                 />
                 <div className="p-6">
+                  <span className="mb-2 block w-fit rounded-md border border-white/10 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-slate-500">
+                    Design concept
+                  </span>
                   <h3 className="text-lg font-semibold text-white transition-colors group-hover:text-accent-400">
                     {project.title}
                   </h3>

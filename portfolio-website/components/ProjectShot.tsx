@@ -6,18 +6,17 @@ import type { Project } from '@/lib/projects';
  * been created yet.
  *
  * These are the intended direction for each project, not screenshots of the
- * current build, so the card carries a visible badge saying so.
+ * current build. The label lives outside the image on purpose - these mockups
+ * are dense, and a badge on top of one covers real content.
  */
 export default function ProjectShot({
   project,
   className = '',
   priority = false,
-  badge = true,
 }: {
   project: Project;
   className?: string;
   priority?: boolean;
-  badge?: boolean;
 }) {
   if (!project.design) {
     return (
@@ -35,14 +34,9 @@ export default function ProjectShot({
         alt={`Design concept for ${project.title}`}
         fill
         priority={priority}
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 560px"
         className="object-cover object-top"
       />
-      {badge && (
-        <span className="absolute left-3 top-3 rounded-md bg-ink-950/85 px-2 py-1 text-[11px] font-medium tracking-wide text-slate-300 backdrop-blur">
-          Design concept
-        </span>
-      )}
     </div>
   );
 }

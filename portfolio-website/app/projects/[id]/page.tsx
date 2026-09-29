@@ -63,7 +63,7 @@ export default function ProjectDetailPage({ params }: Params) {
 
       {project.design ? (
         <figure className="mt-12 overflow-hidden rounded-2xl border border-white/10 bg-ink-900">
-          <ProjectShot project={project} priority badge={false} className="aspect-[16/10] w-full" />
+          <ProjectShot project={project} priority className="aspect-[16/10] w-full" />
           <figcaption className="border-t border-white/10 px-5 py-4 text-xs leading-relaxed text-slate-500">
             <span className="font-semibold uppercase tracking-wider text-slate-400">
               Design concept
