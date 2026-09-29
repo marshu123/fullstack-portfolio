@@ -16,6 +16,34 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'pulse',
+    title: 'Pulse',
+    tagline: 'Uptime monitoring with a background scheduler',
+    description:
+      'Register a URL and a background worker probes it on a schedule, recording response times and reporting uptime over any window.',
+    problem:
+      'I wanted to build the parts of a backend that usually get skipped: a long-running worker, time-series data, and having to decide what a "correct" statistic actually means. The interesting bug was that failed probes were being counted in the latency average, which made a struggling endpoint look healthy.',
+    stack: ['Python', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'React', 'TypeScript'],
+    features: [
+      'JWT auth with PBKDF2 password hashing',
+      'asyncio scheduler with a per-tick time budget',
+      'Uptime and p95 latency across 1h to 30d windows',
+      'Checks stored as rows, so any window can be recomputed',
+      'Charts drawn as plain SVG, with the line broken at gaps',
+      "Another user's monitor id returns 404, not 403",
+    ],
+    challenges: [
+      'Stopping one slow endpoint from starving the probe loop',
+      'Reasoning that a failed probe has no meaningful response time',
+      'SQLite silently ignores ON DELETE CASCADE without a pragma',
+      'Running the same test suite against SQLite and PostgreSQL',
+    ],
+    repoUrl: 'https://github.com/marshu123/pulse',
+    liveUrl: 'https://pulse-frontend.vercel.app',
+    accent: 'from-emerald-500/20 to-teal-500/5',
+    featured: true,
+  },
+  {
     id: 'ecommerce-platform',
     title: 'E-commerce Platform',
     tagline: 'Storefront, cart, and order management',
