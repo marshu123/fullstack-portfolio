@@ -16,6 +16,35 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'cogniflow-agent-studio',
+    title: 'CogniFlow Agent Studio',
+    tagline: 'Multi-agent orchestration on a DAG execution engine',
+    description:
+      'A studio for running specialised agents under a supervisor: it decomposes a directive into a dependency graph, streams each agent run, and only accepts output once the reviewer clears it.',
+    problem:
+      'Most AI projects stop at a chat wrapper, so I wanted to build the part that is actually hard: making several agents hand work to each other and fail usefully. The design question was how to stop an agent from confidently shipping work that fails verification, which is why every branch ends in a critic that runs the code and scans it rather than trusting the generator.',
+    stack: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'Gemini 2.5 API', 'Docker'],
+    features: [
+      'Directed acyclic graph engine with animated state on active edges',
+      'Supervisor coordinating architect, coder, security auditor, and critic agents',
+      'Reflection loop that re-runs with targeted feedback until gates pass',
+      'Sandboxed tools: code sandbox, security scanner, data analyzer, memory, search',
+      'Streaming token telemetry with throughput, p95/p99 latency, and cost estimate',
+      'Simulated swarm mode that runs with no API key required',
+    ],
+    challenges: [
+      'Ordering agent work from a graph rather than a fixed pipeline',
+      'Stopping a reflection loop from iterating forever',
+      'Measuring token throughput and latency per subagent phase',
+      'Hand-writing a glassmorphic design system with vanilla CSS instead of a library',
+    ],
+    repoUrl: 'https://github.com/marshu123/cogniflow-agent-studio',
+    liveUrl: 'https://cogniflow-eight.vercel.app',
+    design: '/projects/cogniflow-agent-studio.jpg',
+    accent: 'from-indigo-500/20 to-purple-500/5',
+    featured: true,
+  },
+  {
     id: 'pulse',
     title: 'Pulse',
     tagline: 'Uptime monitoring with a background scheduler',
