@@ -16,7 +16,7 @@ export default function ProjectsPage() {
         <p className="font-mono text-sm text-accent-500">/projects</p>
         <h1 className="section-title mt-3">Projects</h1>
           <p className="mt-4 max-w-2xl text-slate-400">
-            Four applications built to compare stacks and data models against the
+            Applications built to compare stacks and data models against the
             same problem shape: authentication, persistence, and an interface a
             real person could use.
           </p>

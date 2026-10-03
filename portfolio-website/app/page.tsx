@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { featuredProjects, skillLevels, learning } from '@/lib/projects';
+import { featuredProjects, skillLevels, learning, projects } from '@/lib/projects';
 import ProjectShot from '@/components/ProjectShot';
 
 const stats = [
-  { value: '4', label: 'Fullstack apps' },
+  { value: String(projects.length), label: 'Fullstack apps' },
   { value: '2', label: 'Backend stacks' },
   { value: 'SQL', label: 'and NoSQL data' },
 ];
