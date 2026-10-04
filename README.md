@@ -15,9 +15,9 @@ project actually stands:
 | --- | --- | --- |
 | [`task-manager`](https://github.com/marshu123/task-manager) | **Complete** | FastAPI API, Docker, docker-compose, GitHub Actions CI, full React + TypeScript frontend. Lives in [its own repository](https://github.com/marshu123/task-manager). |
 | [`portfolio-website`](portfolio-website/) | **Complete, deployed** | Next.js 14 + Tailwind portfolio site. Statically prerendered, [live here](https://marshid-portfolio.vercel.app/). |
-| `ecommerce-platform/` | Working, incomplete | FastAPI + SQLAlchemy backend with auth, role-gated product writes, cart and order routes, plus a React + TypeScript storefront. Auth, permissions and checkout verified end to end. No tests, no Docker, not deployed. |
-| `social-dashboard/` | Working, incomplete | Express + Mongoose API with auth, posts, likes, comments and a follow graph, plus a React + TypeScript frontend. No tests, not deployed. No profile-edit route. |
-| `chat-app/` | Frontend only | React 19 + TypeScript UI built against `socket.io-client`, building and linting clean. The WebSocket server is not written, so there is nothing to connect to. |
+| `ecommerce-platform/` | **Work in progress** | FastAPI + SQLAlchemy backend with auth, role-gated product writes, cart and order routes, plus a React + TypeScript storefront. Auth, permissions and checkout verified end to end. No tests, no Docker, not deployed. |
+| `social-dashboard/` | **Work in progress** | Express + Mongoose API with auth, posts, likes, comments and a follow graph, plus a React + TypeScript frontend. No tests, not deployed. No profile-edit route. |
+| `chat-app/` | **Work in progress (frontend only)** | React 19 + TypeScript UI built against `socket.io-client`, building and linting clean. The WebSocket server is not written, so there is nothing to connect to. |
 
 `task-manager` is the project I would open first — it is the only one with tests in CI,
 containerisation, and a complete UI.
