@@ -21,7 +21,7 @@ export const projects: Project[] = [
     title: 'CogniFlow Agent Studio',
     tagline: 'Multi-agent orchestration on a DAG execution engine',
     description:
-      'A studio for running specialised agents under a supervisor: it decomposes a directive into a dependency graph, streams each agent run, and only accepts output once the reviewer clears it.',
+      'AI-powered multi-agent orchestration and workflow application built with React, TypeScript and Vite.',
     problem:
       'Most AI projects stop at a chat wrapper, so I wanted to build the part that is actually hard: making several agents hand work to each other and fail usefully. The design question was how to stop an agent from confidently shipping work that fails verification, which is why every branch ends in a critic that runs the code and scans it rather than trusting the generator.',
     stack: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'Gemini 2.5 API', 'Docker'],
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     title: 'Pulse',
     tagline: 'Uptime monitoring with a background scheduler',
     description:
-      'Register a URL and a background worker probes it on a schedule, recording response times and reporting uptime over any window.',
+      'Full-stack uptime monitoring application built with React, TypeScript, FastAPI and PostgreSQL.',
     problem:
       'I wanted to build the parts of a backend that usually get skipped: a long-running worker, time-series data, and having to decide what a "correct" statistic actually means. The interesting bug was that failed probes were being counted in the latency average, which made a struggling endpoint look healthy.',
     stack: ['Python', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'React', 'TypeScript'],
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     title: 'Task Manager',
     tagline: 'CRUD API with a typed React UI',
     description:
-      'My first fullstack project: a task CRUD API in FastAPI with a React and TypeScript frontend. The API is deployed publicly and the React UI talks to it over HTTPS, so the demo below is fully functional: create, complete, and delete tasks.',
+      'Full-stack task management application built with React, TypeScript, FastAPI and Docker, demonstrating REST APIs and CRUD operations.',
     problem:
       'Started here to learn the shape of a real project — separating a typed API contract from the UI that consumes it, and containerising a backend from day one.',
     stack: ['React', 'TypeScript', 'FastAPI', 'SQLAlchemy', 'Pydantic', 'Docker'],

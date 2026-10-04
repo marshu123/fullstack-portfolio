@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { featuredProjects, skillLevels, learning, projects } from '@/lib/projects';
+import { featuredProjects, learning, projects } from '@/lib/projects';
 import ProjectShot from '@/components/ProjectShot';
 
 const stats = [
   { value: String(projects.length), label: 'Completed projects' },
-  { value: '2', label: 'Live demos' },
+  { value: '3', label: 'Live demos' },
   { value: 'SQL', label: 'PostgreSQL & SQLite' },
 ];
 
@@ -30,18 +30,14 @@ export default function HomePage() {
             Marshid P
           </h1>
           <p className="mt-4 text-lg text-accent-400 sm:text-xl lg:text-2xl">
-            Software Developer | Full-Stack &amp; AI
+            Software Developer | Full-Stack &amp; AI | Data &amp; Business Analytics
           </p>
 
           <p className="mt-6 max-w-2xl leading-relaxed text-slate-400">
-            I build complete web applications — the data model, the API
-            contract, and the interface that consumes it — from React and
-            TypeScript frontends to FastAPI, Node.js, and PostgreSQL backends,
-            including an AI multi-agent orchestration platform. I own the whole
-            path and care about the parts that are easy to skip and expensive to
-            skip later: authentication, persistence, and error states that tell
-            the user something useful. Currently open to software development
-            roles and internships.
+            BSc Computer Science graduate focused on building practical
+            software, AI-powered applications, and data-driven solutions.
+            Interested in software development, AI, analytics, business
+            technology, reporting, and technology-driven operations.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -82,16 +78,18 @@ export default function HomePage() {
           <div className="mt-8 grid gap-8 lg:gap-10 lg:grid-cols-3">
             <div className="space-y-5 leading-relaxed text-slate-400 lg:col-span-2">
               <p>
-                I am a software developer from Kerala, India, focused on
-                full-stack development and AI. On the front end I work with
-                React and TypeScript; on the back end with Node.js/Express and
-                Python/FastAPI.
+                I&rsquo;m a BSc Computer Science graduate interested in
+                software development, AI, data analytics, and
+                technology-driven business solutions. I enjoy building
+                practical applications, working with data, improving
+                workflows, and using technology to solve real-world
+                problems.
               </p>
               <p>
-                I am early in my career and honest about that. What I do have is
-                a habit of finishing things, writing down what broke, and being
-                specific about what I do not yet know. I would rather ship a
-                smaller thing that works than a larger thing that mostly works.
+                Open to entry-level opportunities in software development,
+                full-stack development, AI applications, data analytics,
+                business analysis, reporting, and technology-driven
+                operations.
               </p>
             </div>
 
@@ -118,23 +116,35 @@ export default function HomePage() {
           <p className="font-mono text-sm text-accent-500">/skills</p>
           <h2 className="section-title mt-3">My skills</h2>
           <p className="mt-4 max-w-2xl text-slate-400">
-            Self-assessed, based on what I have actually shipped rather than how
-            long I have used them.
+            Only technologies that appear in my projects or current skill set.
           </p>
 
-          <div className="mt-8 grid gap-x-12 gap-y-7 sm:mt-10 sm:grid-cols-2">
-            {skillLevels.map((skill) => (
-              <div key={skill.name}>
-                <div className="flex items-baseline justify-between text-sm">
-                  <span className="text-slate-300">{skill.name}</span>
-                  <span className="font-mono text-slate-500">{skill.level}%</span>
-                </div>
-                <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
-                  <div
-                    className="h-full rounded-full bg-accent-500"
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
+          <div className="mt-8 grid gap-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                group: 'Software Development',
+                items: ['Python', 'JavaScript', 'TypeScript', 'React', 'FastAPI', 'SQL', 'REST APIs'],
+              },
+              {
+                group: 'AI & Data',
+                items: ['Artificial Intelligence', 'AI Applications', 'Data Analysis', 'Data-driven Applications'],
+              },
+              {
+                group: 'Tools & Deployment',
+                items: ['Git', 'GitHub', 'Docker', 'GitHub Actions', 'Vercel', 'Render'],
+              },
+            ].map((group) => (
+              <div key={group.group} className="card">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+                  {group.group}
+                </h3>
+                <ul className="mt-4 space-y-2">
+                  {group.items.map((item) => (
+                    <li key={item} className="text-sm text-slate-300">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -185,6 +195,20 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ---------------- interest ---------------- */}
+      <section className="border-t border-white/10">
+        <div className="container-page py-14 sm:py-20">
+          <h2 className="section-title mt-3">Beyond the code</h2>
+          <p className="mt-4 max-w-2xl text-slate-400">
+            Also interested in data analytics, business analytics, reporting,
+            business technology, process improvement, and technology-driven
+            operations — a secondary direction for entry-level Data Analyst,
+            Business Analyst, IT Business Analyst, Operations Analyst, MIS, and
+            technology-operations roles.
+          </p>
         </div>
       </section>
 

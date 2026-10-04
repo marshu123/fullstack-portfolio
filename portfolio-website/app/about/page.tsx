@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { skills } from '@/lib/projects';
 
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Marshid P is a software developer from Kerala, India, focused on full-stack development and AI, with a BSc in Computer Science from the University of Calicut.',
+    'Marshid P is a BSc Computer Science graduate interested in software development, AI, data analytics, and technology-driven business solutions.',
 };
 
 export default function AboutPage() {
@@ -16,23 +15,16 @@ export default function AboutPage() {
         <h1 className="section-title mt-3">About me</h1>
         <div className="mt-6 space-y-5 leading-relaxed text-slate-400">
           <p>
-            I am a software developer from Kerala, India, focused on
-            full-stack development and AI. I work across the whole stack, but
-            React and TypeScript are where I spend most of my time — and I am
-            happiest when the same person who designs the interface also gets
-            to shape the API behind it.
+            I&rsquo;m a BSc Computer Science graduate interested in software
+            development, AI, data analytics, and technology-driven business
+            solutions. I enjoy building practical applications, working with
+            data, improving workflows, and using technology to solve
+            real-world problems.
           </p>
           <p>
-            My focus is on the parts of web development that are easy to skip
-            and expensive to skip later: authentication that is actually secure,
-            data models that survive contact with real requirements, and error
-            states that tell the user something useful. I would rather ship a
-            smaller thing that works than a larger thing that mostly works.
-          </p>
-          <p>
-            I am early in my career and honest about that. What I do have is a
-            habit of finishing things, writing them down, and being specific
-            about what I do not yet know.
+            Open to entry-level opportunities in software development,
+            full-stack development, AI applications, data analytics, business
+            analysis, reporting, and technology-driven operations.
           </p>
         </div>
       </header>
@@ -58,7 +50,20 @@ export default function AboutPage() {
       <section className="mt-12">
         <h2 className="text-xl font-semibold text-white">Technical skills</h2>
         <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {skills.map((group) => (
+          {[
+            {
+              group: 'Software Development',
+              items: ['Python', 'JavaScript', 'TypeScript', 'React', 'FastAPI', 'SQL', 'REST APIs'],
+            },
+            {
+              group: 'AI & Data',
+              items: ['Artificial Intelligence', 'AI Applications', 'Data Analysis', 'Data-driven Applications'],
+            },
+            {
+              group: 'Tools & Deployment',
+              items: ['Git', 'GitHub', 'Docker', 'GitHub Actions', 'Vercel', 'Render'],
+            },
+          ].map((group) => (
             <div key={group.group} className="card">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
                 {group.group}

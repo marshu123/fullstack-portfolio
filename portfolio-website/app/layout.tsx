@@ -20,11 +20,11 @@ const siteUrl = 'https://marshid-portfolio.vercel.app';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Marshid P — Software Developer | Full-Stack & AI',
+    default: 'Marshid P | Software Developer | Full-Stack & AI',
     template: '%s — Marshid P',
   },
   description:
-    'Software developer specialising in full-stack development and AI: React, TypeScript, Node.js, FastAPI, PostgreSQL, and multi-agent AI systems. Building complete products end to end.',
+    'BSc Computer Science graduate building practical software, AI-powered applications and data-driven solutions.',
   keywords: [
     'Marshid P',
     'software developer',
@@ -45,13 +45,13 @@ export const metadata: Metadata = {
     siteName: 'Marshid P — Software Developer | Full-Stack & AI',
     title: 'Marshid P — Software Developer | Full-Stack & AI',
     description:
-      'Software developer specialising in full-stack development and AI. Building complete products end to end.',
+      'BSc Computer Science graduate building practical software, AI-powered applications and data-driven solutions.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Marshid P — Software Developer | Full-Stack & AI',
     description:
-      'Software developer specialising in full-stack development and AI.',
+      'BSc Computer Science graduate building practical software, AI-powered applications and data-driven solutions.',
   },
   robots: {
     index: true,
