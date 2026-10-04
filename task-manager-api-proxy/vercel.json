@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "http://Task-manager-api-env.eba-kynjvt2t.ap-south-1.elasticbeanstalk.com/$1"
+    }
+  ]
+}
