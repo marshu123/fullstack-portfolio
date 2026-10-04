@@ -24,12 +24,12 @@ export default function HomePage() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(45,212,191,0.14),transparent_62%)]"
         />
-        <div className="container-page relative py-24 sm:py-28">
+        <div className="container-page relative py-16 sm:py-24 lg:py-28">
           <p className="font-mono text-sm text-accent-500">Hello, my name is</p>
-          <h1 className="mt-4 text-5xl font-bold tracking-tight text-white sm:text-6xl">
+          <h1 className="mt-4 text-[2.25rem] font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Marshid P
           </h1>
-          <p className="mt-4 text-xl text-accent-400 sm:text-2xl">
+          <p className="mt-4 text-lg text-accent-400 sm:text-xl lg:text-2xl">
             A Fullstack Developer.
           </p>
 
@@ -41,7 +41,7 @@ export default function HomePage() {
             that tell the user something useful.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
             <Link href="/projects" className="btn-primary">
               View my work
             </Link>
@@ -57,13 +57,13 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <dl className="mt-16 grid max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-8">
+          <dl className="mt-12 grid max-w-lg grid-cols-3 gap-4 border-t border-white/10 pt-8 sm:mt-16 sm:gap-6">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <dt className="font-mono text-2xl font-semibold text-white">
+                <dt className="font-mono text-xl font-semibold text-white sm:text-2xl">
                   {stat.value}
                 </dt>
-                <dd className="mt-1 text-sm text-slate-500">{stat.label}</dd>
+                <dd className="mt-1 text-xs leading-snug text-slate-500 sm:text-sm">{stat.label}</dd>
               </div>
             ))}
           </dl>
@@ -72,11 +72,11 @@ export default function HomePage() {
 
       {/* ---------------- about ---------------- */}
       <section className="border-b border-white/10">
-        <div className="container-page py-20">
+        <div className="container-page py-14 sm:py-20">
           <p className="font-mono text-sm text-accent-500">/about</p>
           <h2 className="section-title mt-3">About me</h2>
 
-          <div className="mt-8 grid gap-10 lg:grid-cols-3">
+          <div className="mt-8 grid gap-8 lg:gap-10 lg:grid-cols-3">
             <div className="space-y-5 leading-relaxed text-slate-400 lg:col-span-2">
               <p>
                 I am a fullstack developer from Kerala, India, working across
@@ -110,7 +110,7 @@ export default function HomePage() {
 
       {/* ---------------- skills ---------------- */}
       <section className="border-b border-white/10">
-        <div className="container-page py-20">
+        <div className="container-page py-14 sm:py-20">
           <p className="font-mono text-sm text-accent-500">/skills</p>
           <h2 className="section-title mt-3">My skills</h2>
           <p className="mt-4 max-w-2xl text-slate-400">
@@ -118,7 +118,7 @@ export default function HomePage() {
             long I have used them.
           </p>
 
-          <div className="mt-10 grid gap-x-12 gap-y-7 sm:grid-cols-2">
+          <div className="mt-8 grid gap-x-12 gap-y-7 sm:mt-10 sm:grid-cols-2">
             {skillLevels.map((skill) => (
               <div key={skill.name}>
                 <div className="flex items-baseline justify-between text-sm">
@@ -139,13 +139,13 @@ export default function HomePage() {
 
       {/* ---------------- portfolio ---------------- */}
       <section className="border-b border-white/10">
-        <div className="container-page py-20">
+        <div className="container-page py-14 sm:py-20">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
             <div>
               <p className="font-mono text-sm text-accent-500">/portfolio</p>
               <h2 className="section-title mt-3">My work</h2>
             </div>
-            <Link href="/projects" className="text-sm text-accent-500 hover:text-accent-400">
+            <Link href="/projects" className="tap-target text-sm text-accent-500 hover:text-accent-400">
               All projects &rarr;
             </Link>
           </div>
@@ -155,7 +155,7 @@ export default function HomePage() {
             The repositories contain a working subset of them so far.
           </p>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="mt-8 grid gap-6 sm:mt-10 sm:grid-cols-2">
             {featuredProjects.map((project, index) => (
               <Link
                 key={project.id}
@@ -167,7 +167,7 @@ export default function HomePage() {
                   priority={index < 2}
                   className="aspect-[16/10] w-full border-b border-white/10"
                 />
-                <div className="p-6">
+                <div className="p-5 sm:p-6">
                   <span className="mb-2 block w-fit rounded-md border border-white/10 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-slate-500">
                     Design concept
                   </span>
@@ -194,7 +194,7 @@ export default function HomePage() {
 
       {/* ---------------- learning ---------------- */}
       <section>
-        <div className="container-page py-20">
+        <div className="container-page py-14 sm:py-20">
           <p className="font-mono text-sm text-accent-500">/learning</p>
           <h2 className="section-title mt-3">What I am learning</h2>
           <p className="mt-4 max-w-2xl text-slate-400">
@@ -202,7 +202,7 @@ export default function HomePage() {
             I actually closed them.
           </p>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="mt-8 grid gap-6 sm:mt-10 sm:grid-cols-2">
             {learning.map((item) => (
               <article key={item.topic} className="card">
                 <h3 className="font-semibold text-white">{item.topic}</h3>
@@ -213,7 +213,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-14 flex flex-wrap gap-4">
+          <div className="mt-12 flex flex-col gap-3 sm:mt-14 sm:flex-row sm:flex-wrap sm:gap-4">
             <Link href="/projects" className="btn-primary">
               See my work
             </Link>

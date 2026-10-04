@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="container-page py-20">
+    <div className="container-page py-14 sm:py-20">
       <header className="max-w-3xl">
         <p className="font-mono text-sm text-accent-500">/about</p>
         <h1 className="section-title mt-3">About me</h1>
@@ -36,7 +36,7 @@ export default function AboutPage() {
         </div>
       </header>
 
-      <section className="mt-16">
+      <section className="mt-12 sm:mt-16">
         <h2 className="text-xl font-semibold text-white">Education</h2>
         <div className="card mt-5">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -96,7 +96,7 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <div className="mt-16">
+      <div className="mt-12 sm:mt-16">
         <Link href="/contact" className="btn-primary">
           Get in touch
         </Link>

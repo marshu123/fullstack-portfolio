@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="container-page py-20">
+    <div className="container-page py-14 sm:py-20">
       <header className="max-w-2xl">
         <p className="font-mono text-sm text-accent-500">/projects</p>
         <h1 className="section-title mt-3">Projects</h1>
@@ -27,7 +27,7 @@ export default function ProjectsPage() {
           </p>
       </header>
 
-      <div className="mt-14 grid gap-6 sm:grid-cols-2">
+      <div className="mt-10 grid gap-6 sm:mt-14 sm:grid-cols-2">
         {projects.map((project) => (
             <article
               key={project.id}
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
                 project={project}
                 className="aspect-[16/10] w-full border-b border-white/10"
               />
-                <div className="flex flex-1 flex-col p-6">
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
                   <span className="mb-2 w-fit rounded-md border border-white/10 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-slate-500">
                     Design concept
                   </span>
@@ -57,10 +57,10 @@ export default function ProjectsPage() {
                 ))}
               </ul>
 
-              <div className="mt-6 flex items-center gap-4 text-sm">
+              <div className="mt-6 flex flex-wrap items-center gap-x-4 text-sm">
                 <Link
                   href={`/projects/${project.id}`}
-                  className="font-medium text-white transition-colors hover:text-accent-400"
+                  className="tap-target font-medium text-white transition-colors hover:text-accent-400"
                 >
                   Case study &rarr;
                 </Link>
@@ -68,7 +68,7 @@ export default function ProjectsPage() {
                   href={project.repoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-500 transition-colors hover:text-accent-400"
+                  className="tap-target text-slate-500 transition-colors hover:text-accent-400"
                 >
                   Source
                 </a>
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-accent-500 transition-colors hover:text-accent-400"
+                    className="tap-target text-accent-500 transition-colors hover:text-accent-400"
                   >
                     Live demo
                   </a>

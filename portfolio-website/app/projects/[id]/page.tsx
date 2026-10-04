@@ -29,24 +29,24 @@ export default function ProjectDetailPage({ params }: Params) {
   }
 
   return (
-    <div className="container-page py-20">
+    <div className="container-page py-14 sm:py-20">
       <Link
         href="/projects"
-        className="inline-flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-accent-400"
+        className="tap-target -ml-2 gap-2 px-2 text-sm text-slate-400 transition-colors hover:text-accent-400"
       >
         &larr; All projects
       </Link>
 
-      <header className="mt-8 max-w-3xl">
+      <header className="mt-6 max-w-3xl sm:mt-8">
         <p className="font-mono text-sm text-accent-500">{project.tagline}</p>
-        <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+        <h1 className="mt-3 text-[1.75rem] font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
           {project.title}
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-slate-400">
           {project.description}
         </p>
 
-        <div className="mt-7 flex flex-wrap gap-3">
+        <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-3">
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -89,7 +89,7 @@ export default function ProjectDetailPage({ params }: Params) {
         />
       )}
 
-      <div className="mt-12 grid gap-10 lg:grid-cols-3">
+      <div className="mt-10 grid gap-10 sm:mt-12 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-10">
           <section>
             <h2 className="text-xl font-semibold text-white">The problem</h2>
@@ -147,7 +147,7 @@ export default function ProjectDetailPage({ params }: Params) {
               href={project.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-block break-all text-sm text-accent-500 hover:text-accent-400"
+              className="tap-target -ml-1 mt-3 break-all px-1 text-sm text-accent-500 hover:text-accent-400 md:inline-block"
             >
               {project.repoUrl.replace('https://github.com/', '')}
             </a>

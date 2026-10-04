@@ -52,7 +52,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="container-page py-20">
+    <div className="container-page py-14 sm:py-20">
       <header className="max-w-2xl">
         <p className="font-mono text-sm text-accent-500">/contact</p>
         <h1 className="section-title mt-3">Get in touch</h1>
@@ -63,7 +63,7 @@ export default function ContactPage() {
         </p>
       </header>
 
-      <div className="mt-14 grid gap-8 lg:grid-cols-5">
+      <div className="mt-10 grid gap-8 lg:mt-14 lg:grid-cols-5">
         <div className="space-y-4 lg:col-span-2">
           {channels.map((channel) => (
             <a
@@ -73,7 +73,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="card group block"
             >
-              <div className="flex items-baseline justify-between gap-3">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                 <span className="text-sm font-semibold text-white">
                   {channel.label}
                 </span>
@@ -107,7 +107,7 @@ export default function ContactPage() {
                 value={name}
                 onChange={(event) => setName(event.target.value)}
                 placeholder="Your name"
-                className="w-full rounded-lg border border-white/10 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 transition-colors focus:border-accent-500 focus:outline-none"
+                className="w-full rounded-lg border border-white/10 bg-ink-950 px-4 py-3 text-base text-white placeholder:text-slate-600 transition-colors focus:border-accent-500 focus:outline-none sm:text-sm md:py-2.5"
               />
             </div>
 
@@ -125,7 +125,7 @@ export default function ContactPage() {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="you@company.com"
-                className="w-full rounded-lg border border-white/10 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 transition-colors focus:border-accent-500 focus:outline-none"
+                className="w-full rounded-lg border border-white/10 bg-ink-950 px-4 py-3 text-base text-white placeholder:text-slate-600 transition-colors focus:border-accent-500 focus:outline-none sm:text-sm md:py-2.5"
               />
             </div>
 
@@ -143,7 +143,7 @@ export default function ContactPage() {
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
                 placeholder="What are you working on?"
-                className="w-full resize-none rounded-lg border border-white/10 bg-ink-950 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 transition-colors focus:border-accent-500 focus:outline-none"
+                className="w-full resize-none rounded-lg border border-white/10 bg-ink-950 px-4 py-3 text-base text-white placeholder:text-slate-600 transition-colors focus:border-accent-500 focus:outline-none sm:text-sm md:py-2.5"
               />
             </div>
 

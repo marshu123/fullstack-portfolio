@@ -32,7 +32,7 @@ const nav = [
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-ink-950">
-      <div className="container-page py-12">
+      <div className="container-page py-10 sm:py-12">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-xs">
             <p className="font-mono text-sm font-semibold text-white">
@@ -51,7 +51,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-slate-500 transition-colors hover:text-accent-400"
+                    className="tap-target text-sm text-slate-500 transition-colors hover:text-accent-400"
                   >
                     {item.label}
                   </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
                     href={social.href}
                     target={social.href.startsWith('mailto:') ? undefined : '_blank'}
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 text-sm text-slate-500 transition-colors hover:text-accent-400"
+                    className="tap-target group gap-2 text-sm text-slate-500 transition-colors hover:text-accent-400"
                   >
                     <svg
                       className="h-4 w-4"
@@ -87,7 +87,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6">
+        <div className="mt-8 border-t border-white/10 pt-6 sm:mt-10">
           <p className="text-xs text-slate-600">
             &copy; {new Date().getFullYear()} Marshid P. Built with Next.js and
             Tailwind CSS.

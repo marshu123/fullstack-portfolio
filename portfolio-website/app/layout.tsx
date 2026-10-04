@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import Layout from '@/components/Layout';
 import './globals.css';
@@ -55,6 +55,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  // Matches bg-ink-950 so mobile browser chrome blends into the page.
+  themeColor: '#080b14',
 };
 
 export default function RootLayout({
