@@ -78,7 +78,7 @@ export const projects: Project[] = [
     title: 'Task Manager',
     tagline: 'CRUD API with a typed React UI',
     description:
-      'My first fullstack project: a task CRUD API in FastAPI with a React and TypeScript frontend.',
+      'My first fullstack project: a task CRUD API in FastAPI with a React and TypeScript frontend. The API is deployed publicly and the React UI talks to it over HTTPS, so the demo below is fully functional: create, complete, and delete tasks.',
     problem:
       'Started here to learn the shape of a real project — separating a typed API contract from the UI that consumes it, and containerising a backend from day one.',
     stack: ['React', 'TypeScript', 'FastAPI', 'SQLAlchemy', 'Pydantic', 'Docker'],
@@ -96,7 +96,7 @@ export const projects: Project[] = [
       'Setting up Docker from the beginning',
     ],
     repoUrl: 'https://github.com/marshu123/task-manager',
-    
+    liveUrl: 'https://task-manager-app-self-five.vercel.app',
     design: '/projects/task-manager.png',
     accent: 'from-amber-500/20 to-orange-500/5',
     featured: true,
