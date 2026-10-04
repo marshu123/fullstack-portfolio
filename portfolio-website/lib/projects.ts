@@ -99,7 +99,7 @@ export const projects: Project[] = [
     
     design: '/projects/task-manager.png',
     accent: 'from-amber-500/20 to-orange-500/5',
-    featured: false,
+    featured: true,
   },
 ];
 
