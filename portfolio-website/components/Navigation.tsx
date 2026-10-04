@@ -5,10 +5,17 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const links = [
-  { href: '/projects', label: 'Projects' },
+  { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/#skills', label: 'Skills' },
+  { href: '/projects', label: 'Projects' },
   { href: '/contact', label: 'Contact' },
 ];
+
+function isActive(pathname: string, href: string) {
+  if (href.includes('#')) return false;
+  return href === '/' ? pathname === '/' : pathname.startsWith(href);
+}
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
@@ -44,7 +51,7 @@ export default function Navigation() {
             <Link
               key={link.href}
               href={link.href}
-              aria-current={pathname === link.href ? 'page' : undefined}
+              aria-current={isActive(pathname, link.href) ? 'page' : undefined}
               className="rounded-md px-3 py-2 text-sm text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
             >
               {link.label}
@@ -57,6 +64,13 @@ export default function Navigation() {
             className="ml-1 rounded-md border border-white/15 px-3 py-2 text-sm font-medium text-slate-200 transition-colors hover:border-accent-500/50 hover:text-white"
           >
             GitHub
+          </a>
+          <a
+            href="/cv.pdf"
+            download="Marshid-P-CV.pdf"
+            className="ml-1 rounded-md bg-accent-500 px-3 py-2 text-sm font-semibold text-ink-950 transition-colors hover:bg-accent-400"
+          >
+            Resume
           </a>
         </nav>
 
@@ -106,10 +120,10 @@ export default function Navigation() {
             <Link
               key={link.href}
               href={link.href}
-              aria-current={pathname === link.href ? 'page' : undefined}
+              aria-current={isActive(pathname, link.href) ? 'page' : undefined}
               onClick={() => setOpen(false)}
               className={`flex min-h-[44px] items-center rounded-md px-2 text-base transition-colors hover:bg-white/5 ${
-                pathname === link.href ? 'text-accent-400' : 'text-slate-300'
+                isActive(pathname, link.href) ? 'text-accent-400' : 'text-slate-300'
               }`}
             >
               {link.label}
@@ -123,6 +137,14 @@ export default function Navigation() {
             className="mt-1 flex min-h-[44px] items-center justify-center rounded-md border border-white/15 text-base font-medium text-slate-200 transition-colors hover:border-accent-500/50"
           >
             GitHub
+          </a>
+          <a
+            href="/cv.pdf"
+            download="Marshid-P-CV.pdf"
+            onClick={() => setOpen(false)}
+            className="mt-1 flex min-h-[44px] items-center justify-center rounded-md bg-accent-500 text-base font-semibold text-ink-950 transition-colors hover:bg-accent-400"
+          >
+            Resume
           </a>
         </nav>
       </div>

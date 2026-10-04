@@ -75,12 +75,7 @@ export default function ProjectDetailPage({ params }: Params) {
         <figure className="mt-12 overflow-hidden rounded-2xl border border-white/10 bg-ink-900">
           <ProjectShot project={project} priority className="aspect-[16/10] w-full" />
           <figcaption className="border-t border-white/10 px-5 py-4 text-xs leading-relaxed text-slate-500">
-            <span className="font-semibold uppercase tracking-wider text-slate-400">
-              Design concept
-            </span>{' '}
-            &mdash; this is the direction I am building towards. The repository
-            contains a working subset of it so far, not the full interface shown
-            above.
+            Screenshot of the {project.title} interface.
           </figcaption>
         </figure>
       ) : (
@@ -123,6 +118,26 @@ export default function ProjectDetailPage({ params }: Params) {
               ))}
             </ul>
           </section>
+
+          {project.knownGaps && project.knownGaps.length > 0 && (
+            <section>
+              <h2 className="text-xl font-semibold text-white">Not built yet</h2>
+              <p className="mt-3 leading-relaxed text-slate-500">
+                Listed so the scope above is not read as more than it is.
+              </p>
+              <ul className="mt-4 space-y-3">
+                {project.knownGaps.map((gap) => (
+                  <li key={gap} className="flex gap-3 text-slate-400">
+                    <span
+                      aria-hidden="true"
+                      className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-slate-600"
+                    />
+                    <span className="leading-relaxed">{gap}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
         </div>
 
         <aside className="space-y-6">

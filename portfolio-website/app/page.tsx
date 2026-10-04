@@ -3,9 +3,9 @@ import { featuredProjects, skillLevels, learning, projects } from '@/lib/project
 import ProjectShot from '@/components/ProjectShot';
 
 const stats = [
-  { value: String(projects.length), label: 'Fullstack apps' },
-  { value: '2', label: 'Backend stacks' },
-  { value: 'SQL', label: 'and NoSQL data' },
+  { value: String(projects.length), label: 'Completed projects' },
+  { value: '2', label: 'Live demos' },
+  { value: 'SQL', label: 'PostgreSQL & SQLite' },
 ];
 
 const channels = [
@@ -30,15 +30,18 @@ export default function HomePage() {
             Marshid P
           </h1>
           <p className="mt-4 text-lg text-accent-400 sm:text-xl lg:text-2xl">
-            A Fullstack Developer.
+            Software Developer | Full-Stack &amp; AI
           </p>
 
           <p className="mt-6 max-w-2xl leading-relaxed text-slate-400">
-            I build complete web applications — the data model, the API contract,
-            and the interface that consumes it. I like projects where I own the
-            whole path, and I care most about the parts that are easy to skip and
-            expensive to skip later: authentication, persistence, and error states
-            that tell the user something useful.
+            I build complete web applications — the data model, the API
+            contract, and the interface that consumes it — from React and
+            TypeScript frontends to FastAPI, Node.js, and PostgreSQL backends,
+            including an AI multi-agent orchestration platform. I own the whole
+            path and care about the parts that are easy to skip and expensive to
+            skip later: authentication, persistence, and error states that tell
+            the user something useful. Currently open to software development
+            roles and internships.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -79,9 +82,10 @@ export default function HomePage() {
           <div className="mt-8 grid gap-8 lg:gap-10 lg:grid-cols-3">
             <div className="space-y-5 leading-relaxed text-slate-400 lg:col-span-2">
               <p>
-                I am a fullstack developer from Kerala, India, working across
-                React and TypeScript on the front, and Node.js/Express and
-                Python/FastAPI on the back.
+                I am a software developer from Kerala, India, focused on
+                full-stack development and AI. On the front end I work with
+                React and TypeScript; on the back end with Node.js/Express and
+                Python/FastAPI.
               </p>
               <p>
                 I am early in my career and honest about that. What I do have is
@@ -109,7 +113,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------- skills ---------------- */}
-      <section className="border-b border-white/10">
+      <section id="skills" className="border-b border-white/10 scroll-mt-20">
         <div className="container-page py-14 sm:py-20">
           <p className="font-mono text-sm text-accent-500">/skills</p>
           <h2 className="section-title mt-3">My skills</h2>
@@ -150,11 +154,6 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <p className="mt-6 max-w-2xl text-sm leading-relaxed text-slate-500">
-            The images are design concepts showing where each project is heading.
-            The repositories contain a working subset of them so far.
-          </p>
-
           <div className="mt-8 grid gap-6 sm:mt-10 sm:grid-cols-2">
             {featuredProjects.map((project, index) => (
               <Link
@@ -168,9 +167,6 @@ export default function HomePage() {
                   className="aspect-[16/10] w-full border-b border-white/10"
                 />
                 <div className="p-5 sm:p-6">
-                  <span className="mb-2 block w-fit rounded-md border border-white/10 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-slate-500">
-                    Design concept
-                  </span>
                   <h3 className="text-lg font-semibold text-white transition-colors group-hover:text-accent-400">
                     {project.title}
                   </h3>

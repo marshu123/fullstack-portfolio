@@ -24,9 +24,11 @@ const socials = [
 ];
 
 const nav = [
+  { href: '/', label: 'Home' },
   { href: '/projects', label: 'Projects' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
+  { href: '/cv.pdf', label: 'Resume' },
 ];
 
 export default function Footer() {
@@ -39,8 +41,8 @@ export default function Footer() {
               marshid<span className="text-accent-500">.</span>dev
             </p>
             <p className="mt-3 text-sm leading-relaxed text-slate-500">
-              Fullstack developer building complete products — API, data model
-              and interface.
+              Software Developer | Full-Stack &amp; AI, building complete
+              products — API, data model and interface.
             </p>
           </div>
 
@@ -48,13 +50,23 @@ export default function Footer() {
             <h2 className="text-sm font-semibold text-white">Pages</h2>
             <ul className="mt-3 space-y-2">
               {nav.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="tap-target text-sm text-slate-500 transition-colors hover:text-accent-400"
-                  >
-                    {item.label}
-                  </Link>
+                <li key={item.label}>
+                  {item.href === '/cv.pdf' ? (
+                    <a
+                      href={item.href}
+                      download="Marshid-P-CV.pdf"
+                      className="tap-target text-sm text-slate-500 transition-colors hover:text-accent-400"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="tap-target text-sm text-slate-500 transition-colors hover:text-accent-400"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

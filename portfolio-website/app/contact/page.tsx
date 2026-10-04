@@ -57,9 +57,9 @@ export default function ContactPage() {
         <p className="font-mono text-sm text-accent-500">/contact</p>
         <h1 className="section-title mt-3">Get in touch</h1>
         <p className="mt-4 text-slate-400">
-          I am looking for a fullstack role where I can keep working on real
-          product problems. If that sounds like your team, I would like to hear
-          from you.
+          I am looking for software development roles — full-stack or AI —
+          including internships. If that sounds like your team, I would like
+          to hear from you.
         </p>
       </header>
 

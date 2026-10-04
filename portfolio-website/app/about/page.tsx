@@ -5,7 +5,7 @@ import { skills } from '@/lib/projects';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Marshid P is a fullstack developer from Kerala, India, with a BSc in Computer Science from the University of Calicut.',
+    'Marshid P is a software developer from Kerala, India, focused on full-stack development and AI, with a BSc in Computer Science from the University of Calicut.',
 };
 
 export default function AboutPage() {
@@ -16,10 +16,11 @@ export default function AboutPage() {
         <h1 className="section-title mt-3">About me</h1>
         <div className="mt-6 space-y-5 leading-relaxed text-slate-400">
           <p>
-            I am a fullstack developer from Kerala, India. I work across the
-            whole stack, but React and TypeScript are where I spend most of my
-            time — and I am happiest when the same person who designs the
-            interface also gets to shape the API behind it.
+            I am a software developer from Kerala, India, focused on
+            full-stack development and AI. I work across the whole stack, but
+            React and TypeScript are where I spend most of my time — and I am
+            happiest when the same person who designs the interface also gets
+            to shape the API behind it.
           </p>
           <p>
             My focus is on the parts of web development that are easy to skip

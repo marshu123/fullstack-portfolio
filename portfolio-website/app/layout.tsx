@@ -20,14 +20,16 @@ const siteUrl = 'https://marshid-portfolio.vercel.app';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Marshid P — Fullstack Developer',
+    default: 'Marshid P — Software Developer | Full-Stack & AI',
     template: '%s — Marshid P',
   },
   description:
-    'Fullstack developer specialising in React, TypeScript and Node.js, with backend experience in Express and FastAPI. Building complete products end to end, not just screens.',
+    'Software developer specialising in full-stack development and AI: React, TypeScript, Node.js, FastAPI, PostgreSQL, and multi-agent AI systems. Building complete products end to end.',
   keywords: [
     'Marshid P',
-    'fullstack developer',
+    'software developer',
+    'full-stack developer',
+    'AI developer',
     'React developer',
     'TypeScript',
     'Node.js',
@@ -40,16 +42,16 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: 'Marshid P — Fullstack Developer',
-    title: 'Marshid P — Fullstack Developer',
+    siteName: 'Marshid P — Software Developer | Full-Stack & AI',
+    title: 'Marshid P — Software Developer | Full-Stack & AI',
     description:
-      'Fullstack developer specialising in React, TypeScript and Node.js. Building complete products end to end.',
+      'Software developer specialising in full-stack development and AI. Building complete products end to end.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Marshid P — Fullstack Developer',
+    title: 'Marshid P — Software Developer | Full-Stack & AI',
     description:
-      'Fullstack developer specialising in React, TypeScript and Node.js.',
+      'Software developer specialising in full-stack development and AI.',
   },
   robots: {
     index: true,

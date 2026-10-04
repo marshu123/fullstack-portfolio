@@ -20,11 +20,6 @@ export default function ProjectsPage() {
             same problem shape: authentication, persistence, and an interface a
             real person could use.
           </p>
-          <p className="mt-4 max-w-2xl border-l-2 border-accent-500/40 pl-4 text-sm leading-relaxed text-slate-500">
-            The images below are <span className="text-slate-400">design
-            concepts</span> showing the direction each project is heading. The
-            repositories contain a working subset of them so far.
-          </p>
       </header>
 
       <div className="mt-10 grid gap-6 sm:mt-14 sm:grid-cols-2">
@@ -38,9 +33,6 @@ export default function ProjectsPage() {
                 className="aspect-[16/10] w-full border-b border-white/10"
               />
                 <div className="flex flex-1 flex-col p-5 sm:p-6">
-                  <span className="mb-2 w-fit rounded-md border border-white/10 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-slate-500">
-                    Design concept
-                  </span>
                   <h2 className="text-lg font-semibold text-white">
                 {project.title}
               </h2>

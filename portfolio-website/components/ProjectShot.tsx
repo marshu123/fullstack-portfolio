@@ -2,12 +2,7 @@ import Image from 'next/image';
 import type { Project } from '@/lib/projects';
 
 /**
- * Design concept for a project, with a gradient fallback where no concept has
- * been created yet.
- *
- * These are the intended direction for each project, not screenshots of the
- * current build. The label lives outside the image on purpose - these mockups
- * are dense, and a badge on top of one covers real content.
+ * Project screenshot, with a gradient fallback where none exists.
  */
 export default function ProjectShot({
   project,
@@ -31,7 +26,7 @@ export default function ProjectShot({
     <div className={`relative overflow-hidden bg-ink-800 ${className}`}>
       <Image
         src={project.design}
-        alt={`Design concept for ${project.title}`}
+        alt={`${project.title} screenshot`}
         fill
         priority={priority}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 560px"
