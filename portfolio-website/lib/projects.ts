@@ -70,6 +70,7 @@ export const projects: Project[] = [
     ],
     repoUrl: 'https://github.com/marshu123/pulse',
     liveUrl: 'https://frontend-ruddy-two-24.vercel.app',
+    design: '/projects/pulse.png',
     accent: 'from-emerald-500/20 to-teal-500/5',
     featured: true,
   },
