@@ -6,7 +6,7 @@ import ProjectShot from '@/components/ProjectShot';
 export const metadata: Metadata = {
   title: 'Projects',
   description:
-    'Fullstack projects built with React, TypeScript, Node.js, Express and FastAPI.',
+    'Projects built with React, TypeScript, Node.js, Express and FastAPI.',
 };
 
 export default function ProjectsPage() {
