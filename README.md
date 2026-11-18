@@ -13,6 +13,7 @@ project actually stands:
 
 | Project | Status | What's in the repo |
 | --- | --- | --- |
+| [`webhook-relay`](webhook-relay/) | **Complete, not deployed** | FastAPI + PostgreSQL webhook delivery service with HMAC signing, exponential retries, per-attempt logs, replay and a React dashboard. 31 tests, Docker Compose. No hosted demo yet. |
 | [`task-manager`](https://github.com/marshu123/task-manager) | **Complete** | FastAPI API, Docker, docker-compose, GitHub Actions CI, full React + TypeScript frontend. Lives in [its own repository](https://github.com/marshu123/task-manager). |
 | [`portfolio-website`](portfolio-website/) | **Complete, deployed** | Next.js 14 + Tailwind portfolio site. Statically prerendered, [live here](https://marshid-portfolio.vercel.app/). |
 | `ecommerce-platform/` | **Work in progress** | FastAPI + SQLAlchemy backend with auth, role-gated product writes, cart and order routes, plus a React + TypeScript storefront. Auth, permissions and checkout verified end to end. No tests, no Docker, not deployed. |
@@ -21,6 +22,44 @@ project actually stands:
 
 `task-manager` is the project I would open first — it is the only one with tests in CI,
 containerisation, and a complete UI.
+
+`webhook-relay` is the newest and the deepest backend: background work, retry state
+and failure handling rather than another CRUD screen.
+
+---
+
+## `webhook-relay/` — webhook delivery service
+
+An app posts an event once; Relay fans it out to every subscribed endpoint, signs
+each request with that endpoint's secret, retries failures on an exponential
+backoff, and keeps an immutable log of every attempt. Terminal failures are
+dead-lettered and can be replayed as new deliveries, so the original failure
+stays in the history.
+
+- HMAC-SHA256 signatures over `<timestamp>.<raw body>`, with a replay window
+- Exponential backoff with jitter, six attempts by default, then `dead`
+- Attempt log per delivery: outcome, status code, response excerpt, latency
+- Claim leases so a crashed worker does not strand a delivery
+- `FOR UPDATE SKIP LOCKED` claims on PostgreSQL; one worker per SQLite database
+- Hashed, revocable API keys for ingestion; JWT for the dashboard
+- 31 pytest tests using `httpx.MockTransport`, so no test touches the network
+- React + TypeScript dashboard, Docker Compose with PostgreSQL and nginx
+
+Not built yet: Alembic migrations, ingestion rate limiting, egress filtering for
+private URLs, frontend tests, and a hosted demo. The worker needs a long-running
+process, which is the reason there is no Vercel link.
+
+```bash
+cd webhook-relay/backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements-dev.txt
+python -m pytest
+uvicorn app.main:app --reload
+```
+
+See [`webhook-relay/README.md`](webhook-relay/README.md) for the demo receiver,
+seed script, signature verification sample, API table and Docker setup.
 
 ---
 
@@ -119,7 +158,7 @@ The deployed portfolio. It is also the most complete frontend I have written, so
 as a reference for how I structure a Next.js project.
 
 - Next.js 14 App Router, TypeScript in `strict` mode, Tailwind CSS
-- Fully prerendered — 6 project case studies generated from one data source
+- Fully prerendered — project case studies generated from one data source
   ([`lib/projects.ts`](portfolio-website/lib/projects.ts))
 - Each project lists what is *not* built yet, so the scope claimed is the scope that exists
 - Contact form has no backend; it composes a `mailto:`
@@ -130,6 +169,7 @@ See its [README](portfolio-website/README.md) for the full breakdown.
 
 ## What I am working on
 
+- Deploying `webhook-relay` with a hosted worker and adding Alembic migrations
 - Adding tests to the `ecommerce-platform` and `social-dashboard` backends
 - Adding order-status read/update endpoints and an admin invite flow to `ecommerce-platform`
 - Building the `chat-app` WebSocket server and message persistence

@@ -17,6 +17,52 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'relay',
+    title: 'Relay',
+    tagline: 'Signed webhook delivery with retries and replay',
+    description:
+      'Webhook delivery infrastructure built with FastAPI, PostgreSQL and React: HMAC-signed requests, exponential backoff, a per-attempt log and replay.',
+    problem:
+      'Every other project here is request/response: a user clicks, a handler runs, a row changes. I wanted to build the part that happens when a receiver is not there. That means background work, retry state that survives a restart, and an honest answer to what a failed delivery actually is — a timeout has no status code, a 500 has a body worth keeping, and a redirect is only a success if you are willing to send the payload somewhere the endpoint owner never configured.',
+    stack: [
+      'Python',
+      'FastAPI',
+      'SQLAlchemy',
+      'PostgreSQL',
+      'React',
+      'TypeScript',
+      'Docker',
+    ],
+    features: [
+      'Fan-out to subscribed endpoints, with pause switches and per-type filtering',
+      'HMAC-SHA256 signatures over the timestamp and raw request body',
+      'Exponential backoff with jitter, six attempts, then dead-lettering',
+      'Attempt log per delivery: outcome, status code, response excerpt, latency',
+      'Replay creates a new delivery so the original failure stays in history',
+      'Hashed, revocable ingestion keys; JWT sessions for the dashboard',
+      'Claim leases plus FOR UPDATE SKIP LOCKED for crash-safe delivery on Postgres',
+      '31 pytest tests covering signing, retry policy, fan-out, auth and the worker',
+    ],
+    knownGaps: [
+      'No hosted demo — the delivery worker needs a long-running process',
+      'No Alembic migrations; create_all never alters an existing table',
+      'No ingestion rate limiting and no egress filtering for private target URLs',
+      'The React dashboard has no test suite',
+    ],
+    challenges: [
+      'Treating timeout, HTTP error and redirect as three distinct outcomes',
+      'Keeping retry state correct when the worker process restarts mid-flight',
+      'Signing raw bytes rather than re-serialised JSON',
+      'Keeping naive UTC timestamps consistent across SQLite and PostgreSQL',
+      'Proving the retry path in tests without letting pytest touch the network',
+    ],
+    repoUrl:
+      'https://github.com/marshu123/fullstack-portfolio/tree/main/webhook-relay',
+    design: '/projects/relay.png',
+    accent: 'from-cyan-500/20 to-sky-500/5',
+    featured: true,
+  },
+  {
     id: 'cogniflow-agent-studio',
     title: 'CogniFlow Agent Studio',
     tagline: 'Multi-agent orchestration on a DAG execution engine',
